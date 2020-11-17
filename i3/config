@@ -138,8 +138,14 @@ bindsym $mod+r mode "resize"
 # launch
 bindsym $mod+Return exec x-terminal-emulator
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
-bindsym $mod+e exec nautilus
 bindsym $mod+c exec gnome-control-center
+bindsym $mod+e exec nautilus
+
+# Rofi
+bindsym $mod+space       exec rofi -matching fuzzy -show drun
+bindsym $mod+Shift+space exec rofi -matching fuzzy -show run
+bindsym $mod+Shift+s     exec rofi -matching fuzzy -show ssh
+bindsym $mod+Ctrl+space  exec rofi -matching fuzzy -show window
 
 # screenshot
 bindsym $alt+Ctrl+a exec gnome-screenshot
