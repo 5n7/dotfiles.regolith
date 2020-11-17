@@ -146,6 +146,7 @@ bindsym $mod+space       exec rofi -matching fuzzy -show drun
 bindsym $mod+Shift+space exec rofi -matching fuzzy -show run
 bindsym $mod+Shift+s     exec rofi -matching fuzzy -show ssh
 bindsym $mod+Ctrl+space  exec rofi -matching fuzzy -show window
+bindsym $alt+Tab         exec rofi -matching fuzzy -show windowcd
 
 # screenshot
 bindsym $alt+Ctrl+a exec gnome-screenshot
