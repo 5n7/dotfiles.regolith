@@ -3,9 +3,9 @@
 # fonts
 font pango:MesloLGM Nerd Font 14px
 
-set $left h
-set $down j
-set $up k
+set $left  h
+set $down  j
+set $up    k
 set $right l
 
 # $mod is <Alt>, Mod4 is <Super>
@@ -13,42 +13,38 @@ set $alt Mod1
 set $mod Mod4
 
 # change focus
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
-
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
-# move focused window
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
+bindsym $mod+$left  focus left
+bindsym $mod+$down  focus down
+bindsym $mod+$up    focus up
+bindsym $mod+$right focus right
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+
+# move focused window
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+Shift+$left  move left
+bindsym $mod+Shift+$down  move down
+bindsym $mod+Shift+$up    move up
+bindsym $mod+Shift+$right move right
+
 # switch orientation to split
-bindsym $mod+bracketleft split h
-bindsym $mod+bracketright split v
-bindsym $mod+semicolon split toggle
+bindsym $mod+bracketleft  split horizontal
+bindsym $mod+bracketright split vertical
+bindsym $mod+semicolon    split toggle
 
 # toggle fullscreen
 bindsym $mod+f fullscreen toggle
 
 # toggle floating
 bindsym $mod+Shift+f floating toggle
-
-# change container layout
-bindsym $alt+s layout stacking
-bindsym $alt+w layout tabbed
-bindsym $alt+e layout toggle split
 
 # focus pranet/child container
 bindsym $mod+a focus parent
@@ -61,15 +57,15 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+plus scratchpad show
 
 # define names for default workspaces
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
-set $ws9 9
+set $ws1  1
+set $ws2  2
+set $ws3  3
+set $ws4  4
+set $ws5  5
+set $ws6  6
+set $ws7  7
+set $ws8  8
+set $ws9  9
 set $ws10 10
 
 # switch to workspace
@@ -109,7 +105,7 @@ bindsym $mod+$alt+9 move container to workspace number $ws9;  workspace number $
 bindsym $mod+$alt+0 move container to workspace number $ws10; workspace number $ws10
 
 # switch next/prev workspace
-bindsym $mod+Tab workspace next
+bindsym $mod+Tab       workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # reload i3 config
@@ -126,15 +122,15 @@ bindsym $mod+Shift+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdoto
 
 # resize window
 mode "resize" {
-  bindsym $left  resize shrink width  5 px or 5 ppt
-  bindsym $down  resize grow   height 5 px or 5 ppt
-  bindsym $up    resize shrink height 5 px or 5 ppt
-  bindsym $right resize grow   width  5 px or 5 ppt
-
   bindsym Left  resize shrink width  5 px or 5 ppt
   bindsym Down  resize grow   height 5 px or 5 ppt
   bindsym Up    resize shrink height 5 px or 5 ppt
   bindsym Right resize grow   width  5 px or 5 ppt
+
+  bindsym $left  resize shrink width  5 px or 5 ppt
+  bindsym $down  resize grow   height 5 px or 5 ppt
+  bindsym $up    resize shrink height 5 px or 5 ppt
+  bindsym $right resize grow   width  5 px or 5 ppt
 
   bindsym minus gaps inner current minus 5
   bindsym plus  gaps inner current plus  5
@@ -148,10 +144,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # launch
-bindsym $mod+Return exec x-terminal-emulator
+bindsym $mod+Return       exec x-terminal-emulator
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
-bindsym $mod+c exec gnome-control-center
-bindsym $mod+e exec nautilus
+bindsym $mod+c            exec gnome-control-center
+bindsym $mod+e            exec nautilus
 
 # Rofi
 bindsym $mod+space       exec rofi -matching fuzzy -show drun
@@ -161,21 +157,13 @@ bindsym $mod+Ctrl+space  exec rofi -matching fuzzy -show window
 bindsym $alt+Tab         exec rofi -matching fuzzy -show windowcd
 
 # screenshot
-bindsym $alt+Ctrl+a exec gnome-screenshot
-bindsym $alt+Ctrl+s exec gnome-screenshot --window
-
-# snapshot
-bindsym $mod+comma  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot
-bindsym $mod+period exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot
+bindsym --release Print            exec gnome-screenshot --window
+bindsym --release Shift+Print      exec gnome-screenshot --area
+bindsym --release $mod+Print       exec gnome-screenshot --clipboard
+bindsym --release $mod+Shift+Print exec gnome-screenshot --area --clipboard
 
 # floating modifier
 floating_modifier $mod
-
-# constraining floating window size
-floating_maximum_size -1 x -1
-
-# put title (stacking/tabbed) center
-title_align center
 
 # default border style for new windows
 default_border pixel 3
@@ -194,20 +182,8 @@ client.unfocused        #333333 #222222    #888888 #292d2e   #222222
 client.urgent           #2f343a #eb4d4b    #ffffff #eb4d4b   #eb4d4b
 client.placeholder      #000000 #0c0c0c    #ffffff #000000   #0c0c0c
 
-# do not follow mouse
-focus_follows_mouse no
-
-# popups during fullscreen mode
-popup_during_fullscreen smart
-
 # focus wrapping
 focus_wrapping no
-
-# automatic back-and-forth when switching to the current workspace
-workspace_auto_back_and_forth yes
-
-# drawing marks on window decoration
-show_marks yes
 
 # window asignment
 assign [class="google-chrome"] $ws1
