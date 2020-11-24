@@ -197,5 +197,8 @@ exec --no-startup-id gtk-launch $(xdg-settings get default-web-browser)
 # background image
 exec_always --no-startup-id feh --bg-scale $HOME/.config/regolith/i3/misc/bg.jpg
 
+# lock
+exec --no-startup-id xss-lock -l $DOTFILES/scripts/lock.sh
+
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
