@@ -3,7 +3,7 @@
 i3lock \
   --nofork \
   --no-unlock-indicator \
-  --image=$DOTFILES/images/bg-lock.png \
+  --image=$DOTFILES/images/bg-lock.jpg \
   --ignore-empty-password \
   \
   --clock \
