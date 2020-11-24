@@ -170,6 +170,9 @@ floating_modifier $mod
 # default border style for new windows
 default_border pixel 3
 
+# default gap size
+gaps inner 12
+
 # always show borders
 hide_edge_borders none
 
