@@ -23,3 +23,6 @@ export PATH="$GOPATH/bin:$PATH"
 # dotfiles
 export DOTFILES="$HOME/src/github.com/skmatz/dotfiles"
 export PATH="$DOTFILES/bin:$PATH"
+
+# vin
+export PATH="$HOME/.vin/bin:$PATH"
