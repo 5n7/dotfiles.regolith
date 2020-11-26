@@ -212,4 +212,4 @@ exec_always --no-startup-id compton -b --config $config/regolith/compton/compton
 exec_always --no-startup-id $config/polybar/launch.sh
 
 # repeat keys
-exec_always --no-startup-id xset r rate 160 60
+exec_always --no-startup-id xset r rate 200 60
