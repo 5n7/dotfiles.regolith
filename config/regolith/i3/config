@@ -194,10 +194,12 @@ focus_wrapping no
 assign [class="Google-chrome"] $ws1
 assign [class="Alacritty"]     $ws2
 assign [class="Code"]          $ws3
+assign [class="Slack"]         $ws4
 
 # launch apps
 exec --no-startup-id x-terminal-emulator
 exec --no-startup-id gtk-launch $(xdg-settings get default-web-browser)
+exec --no-startup-id slack
 
 # background image
 exec_always --no-startup-id feh --bg-scale $dotfiles/images/bg.jpg
