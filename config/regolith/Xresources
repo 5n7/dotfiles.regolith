@@ -1,1 +1,1 @@
-i3-wm.program.lock: ~/src/github.com/skmatz/dotfiles/scripts/lock.sh
+i3-wm.program.lock: lock.sh

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 lock=" Lock"
 logout=" Logout"
@@ -8,10 +8,10 @@ suspend="鈴 Suspend"
 
 options="$lock\n$logout\n$reboot\n$shutdown\n$suspend"
 
-chosen="$(echo -e "$options" | rofi -dmenu -i -matching fuzzy)"
+chosen="$(echo "$options" | rofi -dmenu -i -matching fuzzy)"
 case $chosen in
 "$lock")
-  sh "$DOTFILES/scripts/lock.sh"
+  lock.sh
   ;;
 "$logout")
   i3-msg exit
@@ -23,6 +23,6 @@ case $chosen in
   systemctl poweroff
   ;;
 "$suspend")
-  sh "$DOTFILES.scripts/lock.sh" && systemctl suspend
+  lock.sh && systemctl suspend
   ;;
 esac

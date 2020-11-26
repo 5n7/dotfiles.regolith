@@ -157,7 +157,7 @@ bindsym $mod+Shift+space exec rofi -matching fuzzy -show run
 bindsym $mod+Shift+s     exec rofi -matching fuzzy -show ssh
 bindsym $mod+Ctrl+space  exec rofi -matching fuzzy -show window
 bindsym $alt+Tab         exec rofi -matching fuzzy -show windowcd
-bindsym $mod+p           exec $dotfiles/scripts/power.sh
+bindsym $mod+p           exec power.sh
 
 # screenshot
 bindsym --release Print            exec gnome-screenshot --window
