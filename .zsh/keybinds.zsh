@@ -18,3 +18,9 @@ fzf::history() {
 }
 zle -N fzf::history
 bindkey "^H" fzf::history
+
+fzf::ghq() {
+  cd $(ghq list -p | fzf --preview "bat --color=always --style=header {}/README.*")
+}
+zle -N fzf::ghq
+bindkey "^G" fzf::ghq
