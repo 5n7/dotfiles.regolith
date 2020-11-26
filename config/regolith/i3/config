@@ -206,7 +206,7 @@ exec --no-startup-id slack
 exec_always --no-startup-id feh --bg-scale $dotfiles/images/bg.jpg
 
 # lock
-exec_always --no-startup-id xss-lock -l $dotfiles/scripts/lock.sh
+# exec_always --no-startup-id xss-lock -l $dotfiles/scripts/lock.sh
 
 # Compton
 exec_always --no-startup-id compton -b --config $config/regolith/compton/compton.conf
