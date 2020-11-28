@@ -1,1 +1,3 @@
-source "$HOME/.zshenv"
+#!/usr/bin/env bash
+
+.zprofile
