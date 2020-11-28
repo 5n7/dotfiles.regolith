@@ -64,6 +64,10 @@ repo = "skmatz/git-bump"
 keywords = ["linux", "x86_64"]
 
 [[app]]
+repo = "skmatz/spotify-cli"
+keywords = ["linux", "x86_64"]
+
+[[app]]
 repo = "skmatz/vin"
 keywords = ["linux", "x86_64"]
 command = """
