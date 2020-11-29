@@ -1,1 +1,1 @@
-i3-wm.program.lock: lock.sh
+i3-wm.program.lock: xautolock -locknow
