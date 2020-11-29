@@ -18,3 +18,11 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 
 bindkey "\ef" emacs-forward-word
+
+chpwd() {
+  if hash "exa" >/dev/null 2>&1; then
+    exa -ahl --git
+  else
+    ls -al --color=always
+  fi
+}
