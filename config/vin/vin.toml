@@ -79,6 +79,13 @@ vin completion -s zsh > ~/.zfunc/_vin
 """
 
 [[app]]
+repo = "skmatz/zscroll-go"
+keywords = ["linux", "x86_64"]
+command = """
+zscroll completion -s zsh > ~/.zfunc/_zscroll
+"""
+
+[[app]]
 repo = "stedolan/jq"
 keywords = ["linux64"]
 name = "jq"
