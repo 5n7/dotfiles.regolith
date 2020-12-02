@@ -3,7 +3,5 @@
 if [[ $(spotify-cli status --kind playback 2>/dev/null) = "" ]]; then
   echo "Spotify offline"
 else
-  artist=$(spotify-cli status --kind artist 2>/dev/null)
-  title=$(spotify-cli status --kind title 2>/dev/null)
-  echo "${title} by ${artist}"
+  spotify-cli status --format "{{ .Title }} by {{ .Artist }}"
 fi
