@@ -5,6 +5,7 @@ setopt auto_resume
 setopt auto_param_keys
 setopt auto_remove_slash
 setopt correct
+setopt globdots
 setopt ignore_eof
 setopt interactive_comments
 setopt magic_equal_subst
