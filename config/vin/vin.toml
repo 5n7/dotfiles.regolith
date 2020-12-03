@@ -69,7 +69,7 @@ keywords = ["linux", "x86_64"]
 
 [[app]]
 repo = "skmatz/spotify-skip-instrument"
-keywords = ["linux", "x86_64"] 
+keywords = ["linux", "x86_64"]
 
 [[app]]
 repo = "skmatz/vin"
