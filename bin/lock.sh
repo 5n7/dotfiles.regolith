@@ -5,6 +5,7 @@ i3lock \
   --no-unlock-indicator \
   --image="$DOTFILES/images/bg-lock.jpg" \
   --ignore-empty-password \
+  --tiling \
   \
   --clock \
   --pass-media-keys \
